@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern To-Do App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="app-header">
+        <h1 class="app-title">TaskFlow</h1>
+        <p class="app-subtitle">Organize your life, one task at a time</p>
+      </div>
+
+      <div class="input-section">
+        <input
+          type="text"
+          class="task-input"
+          id="taskInput"
+          placeholder="What needs to be done?"
+          maxlength="200"
+        />
+        <button class="add-btn" id="addBtn">Add</button>
+      </div>
+
+      <div class="filter-section">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+
+      <div class="task-stats" id="taskStats">0 tasks remaining</div>
+
+      <div class="tasks-container" id="tasksContainer">
+        <div class="empty-state" id="emptyState">
+          <div class="empty-icon">📝</div>
+          <h3>No tasks yet</h3>
+          <p>Add a task above to get started!</p>
+        </div>
+      </div>
+
+      <button class="clear-completed" id="clearCompleted" disabled>
+        Clear Completed Tasks
+      </button>
+    </div>
+
+    <script src="script.js" />
+  </body>
+</html>
